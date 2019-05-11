@@ -10,7 +10,14 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
+export class MyHammerConfig extends HammerGestureConfig  {
+  overrides = <any>{
+      'pan': {threshold: 10},
+      'swipe': {threshold: 10}
+  }
+}
 @NgModule({
   declarations: [
     MyApp,
@@ -34,7 +41,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { 
+      provide: HAMMER_GESTURE_CONFIG, 
+      useClass: MyHammerConfig 
+    }
   ]
 })
 export class AppModule {}

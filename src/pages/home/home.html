@@ -1,17 +1,29 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Swipe example</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <div class="unlike-hover" #unlikeHover>
+    <ion-icon name="close"></ion-icon>
+  </div>
+  <div *ngFor="let item of items; let i = index">
+      <div class="card" (pan)="handlePan($event)" #card>
+        
+          <div class="card-header">
+              <p>{{ item.name }}</p>
+          </div>
+          <div class="card-content">
+              <img class="user-image" src="assets/imgs/default-user.jpg">
+              <ion-icon (click)="unlikeClickFunction(i)" name="close" #unlike class="unlike"></ion-icon>
+              <ion-icon (click)="likeClickFunction(i)" name="heart" #like class="like"></ion-icon>
+          </div>
+         
+        </div>
+  </div>
+  <div class="like-hover" #likeHover>
+    <ion-icon name="heart"></ion-icon>
+  </div>
+
 </ion-content>

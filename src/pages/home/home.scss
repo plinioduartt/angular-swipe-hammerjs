@@ -1,3 +1,85 @@
 page-home {
+    .card {
+        margin-left: calc( (100% / 2) - 155px);
+        bottom: calc( (100% / 2) - 210px);
+        position: absolute;
+        background: linear-gradient(to right, #ff0076, #ff3dd2 126%);
+        width: 280px;
+        justify-content: center;
+        align-items: center;
+        height: 420px;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+        color: #fff;
+        z-index: 999;
+    }
+
+    .card-header p {
+        font-size: 17px;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    .card-content {
+
+    }
+
+    img.user-image {
+        min-width: 280px;
+        height: 300px;
+        position: relative;
+        left: -20px;
+    }
+
+    .like {
+        position: relative;
+        right: -145px;
+        top: 5px;
+        font-size: 45px;
+    }
+
+   .icon-active {
+       color: red;
+   }
+
+    .unlike {
+        font-size: 45px;
+        position: relative;
+        left: 30px;
+        top: 5px;
+    }
+
+    .unlike-hover {
+        position: absolute;
+        top: 50% !important;
+        left: 5px;
+        color: red;
+        // box-shadow: 0 3px 6px rgba(255, 255, 255, 0.76);
+        font-size: 40px;
+        z-index: 9999;
+        border-radius: 50%;
+        opacity: 0;
+        align-content: center;
+        align-items: center;
+    }
+
+    .like-hover {
+        position: absolute;
+        top: 50% !important;
+        right: 5px;
+        color: red;
+        // box-shadow: 0 3px 6px rgba(255, 255, 255, 0.76);
+        font-size: 40px;
+        z-index: 9999;
+        border-radius: 50%;
+        opacity: 0;
+        align-content: center;
+        align-items: center;
+    }
 
 }
