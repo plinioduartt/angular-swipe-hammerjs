@@ -1,4 +1,4 @@
-# swipe-example
+# Angular swipe example
 Basic mobile application with tinder functionality swipe cards (Ionic v3).
 
 Created by @pj_duarte <br>
